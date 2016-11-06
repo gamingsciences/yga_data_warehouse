@@ -1,0 +1,1971 @@
+###############################################################################
+# mapping for the slot_revenue index
+{
+    "mappings": {
+      "slot_revenue": {
+        "properties": {
+          "adj_net_win": {
+            "type": "double"
+          },
+          "att_payouts_and_vouchers": {
+            "type": "double"
+          },
+          "avg_bet": {
+            "type": "double"
+          },
+          "bills_in_amt": {
+            "type": "double"
+          },
+          "coin_in": {
+            "type": "double"
+          },
+          "coin_out": {
+            "type": "double"
+          },
+          "est_var": {
+            "type": "double"
+          },
+          "freeplay_amt": {
+            "type": "double"
+          },
+          "games_won": {
+            "type": "long"
+          },
+          "gaming_date": {
+            "properties": {
+              "datekey": {
+                "type": "long"
+              },
+              "day_abbrev": {
+                "type": "string"
+              },
+              "day_name": {
+                "type": "string"
+              },
+              "day_num_in_month": {
+                "type": "long"
+              },
+              "day_of_week": {
+                "type": "long"
+              },
+              "full_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "holiday_flag": {
+                "type": "boolean"
+              },
+              "month": {
+                "type": "long"
+              },
+              "month_abbrev": {
+                "type": "string"
+              },
+              "month_end_flag": {
+                "type": "boolean"
+              },
+              "month_name": {
+                "type": "string"
+              },
+              "quarter": {
+                "type": "string"
+              },
+              "week_begin_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "week_begin_datekey": {
+                "type": "long"
+              },
+              "week_num_in_year": {
+                "type": "long"
+              },
+              "weekday_flag": {
+                "type": "boolean"
+              },
+              "year": {
+                "type": "long"
+              },
+              "yearmo": {
+                "type": "long"
+              }
+            }
+          },
+          "gross_drop": {
+            "type": "double"
+          },
+          "handle_pulls": {
+            "type": "long"
+          },
+          "hit_freq": {
+            "type": "double"
+          },
+          "hold": {
+            "type": "double"
+          },
+          "jackpots": {
+            "type": "double"
+          },
+          "lease_fee": {
+            "type": "double"
+          },
+          "location": {
+            "properties": {
+              "area": {
+                "type": "string"
+              },
+              "bank_type": {
+                "type": "string"
+              },
+              "casino": {
+                "type": "string"
+              },
+              "id": {
+                "type": "long"
+              },
+              "location": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "non_smoking_flag": {
+                "type": "boolean"
+              },
+              "position": {
+                "type": "string"
+              },
+              "position_type": {
+                "type": "string"
+              },
+              "section": {
+                "type": "string"
+              }
+            }
+          },
+          "machine_paid_prog": {
+            "type": "double"
+          },
+          "net_win_taxable": {
+            "type": "double"
+          },
+          "num_fifty_dollar": {
+            "type": "long"
+          },
+          "num_five_dollar": {
+            "type": "long"
+          },
+          "num_hundred_dollar": {
+            "type": "long"
+          },
+          "num_one_dollar": {
+            "type": "long"
+          },
+          "num_ten_dollar": {
+            "type": "long"
+          },
+          "num_twenty_dollar": {
+            "type": "long"
+          },
+          "num_two_dollar": {
+            "type": "long"
+          },
+          "points_cashed_amt": {
+            "type": "double"
+          },
+          "slot_number": {
+            "type": "long"
+          },
+          "slotgame": {
+            "properties": {
+              "cabinet": {
+                "type": "string",
+                "fields": {
+                "raw": {
+                    "type": "string",
+                    "index": "not_analyzed"                    
+                }                
+            }
+              },
+              "denomination": {
+                "type": "double"
+              },
+              "description": {
+                "type": "string",
+                "fields": {
+                "raw": {
+                    "type": "string",
+                    "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "game_type": {
+                "type": "string",
+                "fields": {
+                "raw": {
+                    "type": "string",
+                    "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "id": {
+                "type": "long"
+              },
+              "manufacturer": {
+                "type": "string",
+                "fields": {
+                "raw": {
+                    "type": "string",
+                    "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "multidenom": {
+                "type": "boolean"
+              },
+              "multigame": {
+                "type": "boolean"
+              },
+              "num_coins": {
+                "type": "long"
+              },
+              "num_paylines": {
+                "type": "long"
+              },
+              "num_reels": {
+                "type": "long"
+              },
+              "par": {
+                "type": "double"
+              },
+              "progressive": {
+                "type": "boolean"
+              },
+              "volatility": {
+                "type": "double"
+              },
+              "tags": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "slot_number": {
+                "type": "long"
+              }
+            }
+          },
+          "theo_win": {
+            "type": "double"
+          },
+          "tickets_in_amt": {
+            "type": "double"
+          },
+          "tickets_out_amt": {
+            "type": "double"
+          }
+        }
+      }
+    }
+  }
+###############################################################################
+# slot_trip mapping
+{
+    "mappings": {
+      "trip": {
+        "properties": {
+          "actual_win": {
+            "type": "double"
+          },
+          "cash_in": {
+            "type": "double"
+          },
+          "cash_out": {
+            "type": "double"
+          },
+          "end_date": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "freeplay": {
+            "type": "double"
+          },
+          "gaming_date": {
+            "properties": {
+              "datekey": {
+                "type": "long"
+              },
+              "day_abbrev": {
+                "type": "string"
+              },
+              "day_name": {
+                "type": "string"
+              },
+              "day_num_in_month": {
+                "type": "long"
+              },
+              "day_of_week": {
+                "type": "long"
+              },
+              "full_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "holiday_flag": {
+                "type": "boolean"
+              },
+              "month": {
+                "type": "long"
+              },
+              "month_abbrev": {
+                "type": "string"
+              },
+              "month_end_flag": {
+                "type": "boolean"
+              },
+              "month_name": {
+                "type": "string"
+              },
+              "quarter": {
+                "type": "string"
+              },
+              "week_begin_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "week_begin_datekey": {
+                "type": "long"
+              },
+              "week_num_in_year": {
+                "type": "long"
+              },
+              "weekday_flag": {
+                "type": "boolean"
+              },
+              "year": {
+                "type": "long"
+              },
+              "yearmo": {
+                "type": "long"
+              }
+            }
+          },
+          "group_ids": {
+            "type": "long"
+          },
+          "group_names": {
+            "type": "string",
+            "fields": {
+                "raw": {
+                    "type": "string",
+                    "index": "not_analyzed"                    
+                }                
+            }
+          },
+          "jackpots": {
+            "type": "double"
+          },
+          "minutes_played": {
+            "type": "long"
+          },
+          "player": {
+            "properties": {
+              "address_a": {
+                "type": "string",
+                "fields": {
+                        "raw": {
+                            "type": "string",
+                            "index": "not_analyzed"                    
+                        }                
+                    }
+              },
+              "address_b": {
+                "type": "string",
+                "fields": {
+                        "raw": {
+                            "type": "string",
+                            "index": "not_analyzed"                    
+                        }                
+                    }
+              },
+              "age": {
+                "type": "long"
+              },
+              "birth_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "call_flag": {
+                "type": "boolean"
+              },
+              "city": {
+                "type": "string",
+                "fields": {
+                        "raw": {
+                            "type": "string",
+                            "index": "not_analyzed"                    
+                        }                
+                    }
+              },
+              "city_state": {
+                "type": "string",
+                "fields": {
+                        "raw": {
+                            "type": "string",
+                            "index": "not_analyzed"                    
+                        }                
+                    }
+              },
+              "country": {
+                "type": "string",
+                "fields": {
+                        "raw": {
+                            "type": "string",
+                            "index": "not_analyzed"                    
+                        }                
+                    }
+              },
+              "date_joined": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "distance": {
+                "type": "long"
+              },
+              "email": {
+                "type": "string"
+              },
+              "first_name": {
+                "type": "string"
+              },
+              "full_name": {
+                "type": "string",
+                "fields": {
+                        "raw": {
+                            "type": "string",
+                            "index": "not_analyzed"                    
+                        }                
+                    }
+              },
+              "gender": {
+                "type": "string"
+              },
+              "grc_rank": {
+                "type": "string"
+              },
+              "home_geo_point": {
+                "type": "geo_point"
+              },
+              "id": {
+                "type": "long"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "mail_flag": {
+                "type": "boolean"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "player_id": {
+                "type": "long"
+              },
+              "state": {
+                "type": "string",
+                "fields": {
+                        "raw": {
+                            "type": "string",
+                            "index": "not_analyzed"                    
+                        }                
+                    }
+              },
+              "zip_code": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "start_date": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "theo_win": {
+            "type": "double"
+          },
+          "trip_id": {
+            "type": "long"
+          },
+          "trip_type": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+###############################################################################
+# slot_sessions mapping
+{
+    "mappings": {
+      "session": {
+        "properties": {
+          "actual_win": {
+            "type": "double"
+          },
+          "cash_in": {
+            "type": "double"
+          },
+          "cash_out": {
+            "type": "double"
+          },
+          "freeplay": {
+            "type": "double"
+          },
+          "gaming_date": {
+            "properties": {
+              "datekey": {
+                "type": "long"
+              },
+              "day_abbrev": {
+                "type": "string"
+              },
+              "day_name": {
+                "type": "string"
+              },
+              "day_num_in_month": {
+                "type": "long"
+              },
+              "day_of_week": {
+                "type": "long"
+              },
+              "full_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "holiday_flag": {
+                "type": "boolean"
+              },
+              "month": {
+                "type": "long"
+              },
+              "month_abbrev": {
+                "type": "string"
+              },
+              "month_end_flag": {
+                "type": "boolean"
+              },
+              "month_name": {
+                "type": "string"
+              },
+              "quarter": {
+                "type": "string"
+              },
+              "week_begin_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "week_begin_datekey": {
+                "type": "long"
+              },
+              "week_num_in_year": {
+                "type": "long"
+              },
+              "weekday_flag": {
+                "type": "boolean"
+              },
+              "year": {
+                "type": "long"
+              },
+              "yearmo": {
+                "type": "long"
+              }
+            }
+          },
+          "jackpots": {
+            "type": "double"
+          },
+          "group_ids": {
+            "type": "long"
+          },
+          "group_names": {
+            "type": "string",
+            "fields": {
+                "raw": {
+                    "type": "string",
+                    "index": "not_analyzed"                    
+                }                
+            }
+          },
+          "location": {
+            "properties": {
+              "area": {
+                "type": "string"
+              },
+              "bank_type": {
+                "type": "string"
+              },
+              "casino": {
+                "type": "string"
+              },
+              "id": {
+                "type": "long"
+              },
+              "location": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "non_smoking_flag": {
+                "type": "boolean"
+              },
+              "position": {
+                "type": "string"
+              },
+              "position_type": {
+                "type": "string"
+              },
+              "section": {
+                "type": "string"
+              }
+            }
+          },
+          "minutes_played": {
+            "type": "long"
+          },
+          "player": {
+            "properties": {
+              "address_a": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "address_b": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "age": {
+                "type": "long"
+              },
+              "birth_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "call_flag": {
+                "type": "boolean"
+              },
+              "city": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "city_state": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "country": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "date_joined": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "distance": {
+                "type": "long"
+              },
+              "email": {
+                "type": "string"
+              },
+              "first_name": {
+                "type": "string"
+              },
+              "full_name": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "gender": {
+                "type": "string"
+              },
+              "grc_rank": {
+                "type": "string"
+              },
+              "home_geo_point": {
+                "type": "geo_point"
+              },
+              "id": {
+                "type": "long"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "mail_flag": {
+                "type": "boolean"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "player_id": {
+                "type": "long"
+              },
+              "state": {
+                "type": "string"
+              },
+              "zip_code": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "session_id": {
+            "type": "long"
+          },
+          "session_type": {
+            "type": "string"
+          },
+          "shift": {
+            "type": "string"
+          },
+          "slotgame": {
+            "properties": {
+              "cabinet": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "denomination": {
+                "type": "double"
+              },
+              "description": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "game_type": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "id": {
+                "type": "long"
+              },
+              "manufacturer": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "multidenom": {
+                "type": "boolean"
+              },
+              "multigame": {
+                "type": "boolean"
+              },
+              "num_coins": {
+                "type": "long"
+              },
+              "num_paylines": {
+                "type": "long"
+              },
+              "num_reels": {
+                "type": "long"
+              },
+              "par": {
+                "type": "double"
+              },
+              "progressive": {
+                "type": "boolean"
+              },
+              "slot_number": {
+                "type": "long"
+              }
+            }
+          },
+          "start_time": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "theo_win": {
+            "type": "double"
+          },
+          "time": {
+            "properties": {
+              "clock_time": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "hour": {
+                "type": "long"
+              },
+              "id": {
+                "type": "long"
+              },
+              "minute": {
+                "type": "long"
+              },
+              "minute_of_day": {
+                "type": "long"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+###############################################################################
+# pit_revenue mapping
+{
+    "mappings": {
+      "pit_drop": {
+        "properties": {
+          "actual_win": {
+            "type": "double"
+          },
+          "drop_id": {
+            "type": "long"
+          },
+          "game": {
+            "properties": {
+              "game": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "game_type": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "id": {
+                "type": "long"
+              },
+              "oasis_id": {
+                "type": "long"
+              },
+              "pit": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              }
+            }
+          },
+          "gaming_date": {
+            "properties": {
+              "datekey": {
+                "type": "long"
+              },
+              "day_abbrev": {
+                "type": "string"
+              },
+              "day_name": {
+                "type": "string"
+              },
+              "day_num_in_month": {
+                "type": "long"
+              },
+              "day_of_week": {
+                "type": "long"
+              },
+              "full_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "holiday_flag": {
+                "type": "boolean"
+              },
+              "month": {
+                "type": "long"
+              },
+              "month_abbrev": {
+                "type": "string"
+              },
+              "month_end_flag": {
+                "type": "boolean"
+              },
+              "month_name": {
+                "type": "string"
+              },
+              "quarter": {
+                "type": "string"
+              },
+              "week_begin_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "week_begin_datekey": {
+                "type": "long"
+              },
+              "week_num_in_year": {
+                "type": "long"
+              },
+              "weekday_flag": {
+                "type": "boolean"
+              },
+              "year": {
+                "type": "long"
+              },
+              "yearmo": {
+                "type": "long"
+              }
+            }
+          },
+          "location_id": {
+            "type": "long"
+          },
+          "num_fifty_dollar": {
+            "type": "double"
+          },
+          "num_five_dollar": {
+            "type": "double"
+          },
+          "num_hundred_dollar": {
+            "type": "double"
+          },
+          "num_one_dollar": {
+            "type": "double"
+          },
+          "num_ten_dollar": {
+            "type": "double"
+          },
+          "num_thousand_dollar": {
+            "type": "double"
+          },
+          "num_twenty_dollar": {
+            "type": "double"
+          },
+          "num_two_dollar": {
+            "type": "double"
+          },
+          "other": {
+            "type": "double"
+          },
+          "shift_id": {
+            "type": "string"
+          },
+          "total_cash": {
+            "type": "double"
+          },
+          "total_chips": {
+            "type": "double"
+          },
+          "total_drop": {
+            "type": "double"
+          }
+        }
+      }
+    }
+  }
+###############################################################################
+# pit_sessions mapping
+{
+    "mappings": {
+      "session": {
+        "properties": {
+          "actual_win": {
+            "type": "double"
+          },
+          "cash_in": {
+            "type": "double"
+          },
+          "cash_out": {
+            "type": "double"
+          },
+          "chips_in": {
+            "type": "double"
+          },
+          "freeplay": {
+            "type": "double"
+          },
+          "gaming_date": {
+            "properties": {
+              "datekey": {
+                "type": "long"
+              },
+              "day_abbrev": {
+                "type": "string"
+              },
+              "day_name": {
+                "type": "string"
+              },
+              "day_num_in_month": {
+                "type": "long"
+              },
+              "day_of_week": {
+                "type": "long"
+              },
+              "full_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "holiday_flag": {
+                "type": "boolean"
+              },
+              "month": {
+                "type": "long"
+              },
+              "month_abbrev": {
+                "type": "string"
+              },
+              "month_end_flag": {
+                "type": "boolean"
+              },
+              "month_name": {
+                "type": "string"
+              },
+              "quarter": {
+                "type": "string"
+              },
+              "week_begin_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "week_begin_datekey": {
+                "type": "long"
+              },
+              "week_num_in_year": {
+                "type": "long"
+              },
+              "weekday_flag": {
+                "type": "boolean"
+              },
+              "year": {
+                "type": "long"
+              },
+              "yearmo": {
+                "type": "long"
+              }
+            }
+          },
+        "group_ids": {
+            "type": "long"
+          },
+          "group_names": {
+            "type": "string",
+            "fields": {
+                "raw": {
+                    "type": "string",
+                    "index": "not_analyzed"                    
+                }                
+            }
+          },
+          "jackpots": {
+            "type": "double"
+          },
+          "location": {
+            "type": "string",
+            "fields": {
+                "raw": {
+                    "type": "string",
+                    "index": "not_analyzed"                    
+                }                
+            }
+          },
+          "minutes_played": {
+            "type": "long"
+          },
+          "pitgame": {
+            "properties": {
+              "game": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "game_type": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "id": {
+                "type": "long"
+              },
+              "oasis_id": {
+                "type": "long"
+              },
+              "pit": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              }
+            }
+          },
+          "player": {
+            "properties": {
+              "address_a": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "address_b": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "age": {
+                "type": "long"
+              },
+              "birth_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "call_flag": {
+                "type": "boolean"
+              },
+              "city": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "city_state": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "country": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "date_joined": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "distance": {
+                "type": "long"
+              },
+              "email": {
+                "type": "string"
+              },
+              "first_name": {
+                "type": "string"
+              },
+              "full_name": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "gender": {
+                "type": "string"
+              },
+              "grc_rank": {
+                "type": "string"
+              },
+              "home_geo_point": {
+                "type": "geo_point"
+              },
+              "id": {
+                "type": "long"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "mail_flag": {
+                "type": "boolean"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "player_id": {
+                "type": "long"
+              },
+              "state": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "zip_code": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "player_skill": {
+            "type": "long"
+          },
+          "player_speed": {
+            "type": "long"
+          },
+          "rated_by": {
+            "properties": {
+              "employee_id": {
+                "type": "long"
+              },
+              "first_name": {
+                "type": "string"
+              },
+              "id": {
+                "type": "long"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "user_name": {
+                "type": "string"
+              }
+            }
+          },
+          "session_id": {
+            "type": "long"
+          },
+          "session_type": {
+            "type": "string"
+          },
+          "shift": {
+            "type": "string"
+          },
+          "start_time": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "theo_win": {
+            "type": "double"
+          },
+          "time": {
+            "properties": {
+              "clock_time": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "hour": {
+                "type": "long"
+              },
+              "id": {
+                "type": "long"
+              },
+              "minute": {
+                "type": "long"
+              },
+              "minute_of_day": {
+                "type": "long"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+###############################################################################
+# pit_trips mapping
+{
+    "mappings": {
+      "trip": {
+        "properties": {
+          "actual_win": {
+            "type": "double"
+          },
+          "cash_in": {
+            "type": "double"
+          },
+          "cash_out": {
+            "type": "double"
+          },
+          "chips_in": {
+            "type": "double"
+          },
+          "end_date": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "freeplay": {
+            "type": "double"
+          },
+          "gaming_date": {
+            "properties": {
+              "datekey": {
+                "type": "long"
+              },
+              "day_abbrev": {
+                "type": "string"
+              },
+              "day_name": {
+                "type": "string"
+              },
+              "day_num_in_month": {
+                "type": "long"
+              },
+              "day_of_week": {
+                "type": "long"
+              },
+              "full_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "holiday_flag": {
+                "type": "boolean"
+              },
+              "month": {
+                "type": "long"
+              },
+              "month_abbrev": {
+                "type": "string"
+              },
+              "month_end_flag": {
+                "type": "boolean"
+              },
+              "month_name": {
+                "type": "string"
+              },
+              "quarter": {
+                "type": "string"
+              },
+              "week_begin_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "week_begin_datekey": {
+                "type": "long"
+              },
+              "week_num_in_year": {
+                "type": "long"
+              },
+              "weekday_flag": {
+                "type": "boolean"
+              },
+              "year": {
+                "type": "long"
+              },
+              "yearmo": {
+                "type": "long"
+              }
+            }
+          },
+          "group_ids": {
+            "type": "long"
+          },
+          "group_names": {
+            "type": "string",
+            "fields": {
+                "raw": {
+                    "type": "string",
+                    "index": "not_analyzed"                    
+                }                
+            }
+          },
+          "jackpots": {
+            "type": "double"
+          },
+          "minutes_played": {
+            "type": "long"
+          },
+          "player": {
+            "properties": {
+              "address_a": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "address_b": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "age": {
+                "type": "long"
+              },
+              "birth_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "call_flag": {
+                "type": "boolean"
+              },
+              "city": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "city_state": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "country": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "date_joined": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "distance": {
+                "type": "long"
+              },
+              "email": {
+                "type": "string"
+              },
+              "first_name": {
+                "type": "string"
+              },
+              "full_name": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "gender": {
+                "type": "string"
+              },
+              "grc_rank": {
+                "type": "string"
+              },
+              "home_geo_point": {
+                "type": "geo_point"
+              },
+              "id": {
+                "type": "long"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "mail_flag": {
+                "type": "boolean"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "player_id": {
+                "type": "long"
+              },
+              "state": {
+                "type": "string"
+              },
+              "zip_code": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "start_date": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "theo_win": {
+            "type": "double"
+          },
+          "trip_id": {
+            "type": "long"
+          },
+          "trip_type": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+###############################################################################
+# slot_headcount mapping
+{
+    "mappings": {
+      "headcount": {
+        "properties": {
+          "amt_cash_redeemed": {
+            "type": "double"
+          },
+          "amt_cash_uploaded": {
+            "type": "double"
+          },
+          "amt_cep_credits_out": {
+            "type": "double"
+          },
+          "amt_pbt_cash_downloaded": {
+            "type": "double"
+          },
+          "amt_pbt_promo_downloaded": {
+            "type": "double"
+          },
+          "amt_promo_redeemed": {
+            "type": "double"
+          },
+          "carded_play": {
+            "type": "long"
+          },
+          "casino": {
+            "type": "string"
+          },
+          "coin_in": {
+            "type": "double"
+          },
+          "coin_out": {
+            "type": "double"
+          },
+          "date_time": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "denomination": {
+            "type": "double"
+          },
+          "games_available": {
+            "type": "long"
+          },
+          "games_in_play": {
+            "type": "long"
+          },
+          "gaming_date": {
+            "properties": {
+              "datekey": {
+                "type": "long"
+              },
+              "day_abbrev": {
+                "type": "string"
+              },
+              "day_name": {
+                "type": "string"
+              },
+              "day_num_in_month": {
+                "type": "long"
+              },
+              "day_of_week": {
+                "type": "long"
+              },
+              "full_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "holiday_flag": {
+                "type": "boolean"
+              },
+              "month": {
+                "type": "long"
+              },
+              "month_abbrev": {
+                "type": "string"
+              },
+              "month_end_flag": {
+                "type": "boolean"
+              },
+              "month_name": {
+                "type": "string"
+              },
+              "quarter": {
+                "type": "string"
+              },
+              "week_begin_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "week_begin_datekey": {
+                "type": "long"
+              },
+              "week_num_in_year": {
+                "type": "long"
+              },
+              "weekday_flag": {
+                "type": "boolean"
+              },
+              "year": {
+                "type": "long"
+              },
+              "yearmo": {
+                "type": "long"
+              }
+            }
+          },
+          "handle_pulls": {
+            "type": "long"
+          },
+          "headcount_id": {
+            "type": "long"
+          },
+          "noncarded_play": {
+            "type": "long"
+          },
+          "num_fills": {
+            "type": "long"
+          },
+          "num_jackpots": {
+            "type": "long"
+          },
+          "num_pbt_in": {
+            "type": "long"
+          },
+          "num_pbt_out": {
+            "type": "long"
+          },
+          "num_tickets_in": {
+            "type": "long"
+          },
+          "num_tickets_out": {
+            "type": "long"
+          },
+          "time": {
+            "properties": {
+              "clock_time": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "hour": {
+                "type": "long"
+              },
+              "id": {
+                "type": "long"
+              },
+              "minute": {
+                "type": "long"
+              },
+              "minute_of_day": {
+                "type": "long"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+###############################################################################
+# mapping for the slot_player_stats index
+{
+    "mappings": {
+      "stats": {
+        "properties": {
+          "adt": {
+            "type": "double"
+          },
+          "average_daily_coin_in": {
+            "type": "double"
+          },
+          "average_daily_freeplay_used": {
+            "type": "double"
+          },
+          "average_daily_time_played": {
+            "type": "double"
+          },
+          "clv": {
+            "type": "double"
+          },
+          "clv_T": {
+            "type": "double"
+          },
+          "clv_frequency": {
+            "type": "double"
+          },
+          "clv_monetary_value": {
+            "type": "double"
+          },
+          "clv_recency": {
+            "type": "double"
+          },
+          "clv_timeframe": {
+            "type": "string"
+          },
+          "coin_in": {
+            "type": "double"
+          },
+          "freeplay_to_theo_win_ratio": {
+            "type": "double"
+          },
+          "freeplay_used": {
+            "type": "double"
+          },
+          "gaming_date": {
+            "properties": {
+              "datekey": {
+                "type": "long"
+              },
+              "day_abbrev": {
+                "type": "string"
+              },
+              "day_name": {
+                "type": "string"
+              },
+              "day_num_in_month": {
+                "type": "long"
+              },
+              "day_of_week": {
+                "type": "long"
+              },
+              "full_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "holiday_flag": {
+                "type": "boolean"
+              },
+              "month": {
+                "type": "long"
+              },
+              "month_abbrev": {
+                "type": "string"
+              },
+              "month_end_flag": {
+                "type": "boolean"
+              },
+              "month_name": {
+                "type": "string"
+              },
+              "quarter": {
+                "type": "string"
+              },
+              "week_begin_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "week_begin_datekey": {
+                "type": "long"
+              },
+              "week_num_in_year": {
+                "type": "long"
+              },
+              "weekday_flag": {
+                "type": "boolean"
+              },
+              "year": {
+                "type": "long"
+              },
+              "yearmo": {
+                "type": "long"
+              }
+            }
+          },
+          "player": {
+            "properties": {
+              "address_a": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "address_b": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "age": {
+                "type": "long"
+              },
+              "birth_date": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "call_flag": {
+                "type": "boolean"
+              },
+              "city": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "city_state": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "country": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "date_joined": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "distance": {
+                "type": "long"
+              },
+              "email": {
+                "type": "string"
+              },
+              "first_name": {
+                "type": "string"
+              },
+              "full_name": {
+                "type": "string",
+                "fields": {
+                    "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"                    
+                    }                
+                }
+              },
+              "gender": {
+                "type": "string"
+              },
+              "grc_rank": {
+                "type": "string"
+              },
+              "home_geo_point": {
+                "type": "geo_point"
+              },
+              "id": {
+                "type": "long"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "mail_flag": {
+                "type": "boolean"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "player_id": {
+                "type": "long"
+              },
+              "state": {
+                "type": "string"
+              },
+              "zip_code": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "stats_timeframe": {
+            "type": "string"
+          },
+          "time_played": {
+            "type": "double"
+          },
+          "trip_frequency": {
+            "type": "double"
+          },
+          "yield_actual": {
+            "type": "double"
+          },
+          "yield_theo": {
+            "type": "double"
+          }
+        }
+      }
+    }
+  }

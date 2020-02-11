@@ -35,7 +35,7 @@ dask==0.8.1
 datashape==0.5.1
 decorator==4.0.6
 dill==0.2.4
-Django==1.9.6
+Django==1.11.28
 django-admin-steroids==0.3.14
 django-admin-tools==0.7.2
 django-admin-tools-stats==0.6.6

@@ -145,7 +145,7 @@ python-nvd3==0.14.2
 python-slugify==1.1.4
 pytz==2015.7
 pywin32==220
-PyYAML==3.11
+PyYAML==5.4
 pyzmq==15.2.0
 QtAwesome==0.3.2
 qtconsole==4.2.0

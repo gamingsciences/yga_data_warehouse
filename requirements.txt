@@ -134,7 +134,7 @@ pycosat==0.6.1
 pycparser==2.14
 pycrypto==2.6.1
 pyflakes==1.1.0
-Pygments==2.1.1
+Pygments==2.7.4
 pyodbc==3.0.10
 pyOpenSSL==0.15.1
 pyparsing==2.0.3
